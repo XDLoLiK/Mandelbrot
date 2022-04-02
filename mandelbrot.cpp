@@ -58,7 +58,6 @@ int DrawMondelbrotSSE(SDL_Surface *windowSurface, SDL_Renderer *windowRenderer)
         if (timeSpend > CLOCKS_PER_SEC) {
             timeSpend = 0;
             fprintf(stderr, "\rFPS: %zd", frames);
-            fflush(stderr);
             frames = 0;
         }
     }
@@ -115,7 +114,6 @@ int DrawMondelbrotAVX(SDL_Surface *windowSurface, SDL_Renderer *windowRenderer)
         if (timeSpend > CLOCKS_PER_SEC) {
             timeSpend = 0;
             fprintf(stderr, "\rFPS: %zd", frames);
-            fflush(stderr);
             frames = 0;
         }
     }
